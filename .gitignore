@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Secrets
+.env
+*.json.key
+service_account*.json
+credentials*.json
+
+# Local output
+output/
+logs/
+*.log
+!docs/*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

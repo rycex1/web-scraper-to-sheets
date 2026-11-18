@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  macOS launchd job: runs the scraper daily at 06:00.
+  1. Replace /path/to/web-scraper-to-sheets below with your folder.
+  2. cp schedule/com.example.book-scraper.plist ~/Library/LaunchAgents/
+  3. launchctl load ~/Library/LaunchAgents/com.example.book-scraper.plist
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.example.book-scraper</string>
+  <key>WorkingDirectory</key>
+  <string>/path/to/web-scraper-to-sheets</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/path/to/web-scraper-to-sheets/.venv/bin/python</string>
+    <string>-m</string>
+    <string>scraper</string>
+    <string>--pages</string>
+    <string>0</string>
+    <string>--sheets</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>6</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/path/to/web-scraper-to-sheets/logs/scraper.log</string>
+  <key>StandardErrorPath</key>
+  <string>/path/to/web-scraper-to-sheets/logs/scraper.log</string>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+INFO    scraper: Page 1: 20 books
+INFO    scraper: Page 2: 20 books
+INFO    scraper: Page 3: 20 books
+INFO    scraper: Page 4: 20 books
+INFO    scraper: Page 5: 20 books
+INFO    scraper: Scraped 100 rows, kept 100, rejected 0
+INFO    scraper.export: Wrote 100 rows to output/books.csv
+INFO    scraper.export: Wrote 100 rows to output/books.xlsx

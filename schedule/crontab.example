@@ -1,0 +1,3 @@
+# Run the scraper every day at 06:00 and append logs.
+# Edit with: crontab -e   (replace /path/to/web-scraper-to-sheets with your folder)
+0 6 * * * cd /path/to/web-scraper-to-sheets && .venv/bin/python -m scraper --pages 0 --output output/books --sheets >> logs/scraper.log 2>&1
